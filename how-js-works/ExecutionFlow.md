@@ -81,7 +81,7 @@ http://nenya.cis.ibaraki.ac.jp/TIPS/compiler.html
 #### JIT compiler
 JIT = just in time。
 プログラムの実行時に逐次バイトコードからマシンコードを生成するコンパイラ。
-V8のJIT compilerを「Turbo fun」と呼ぶ。
+V8のJIT compilerを「TurboFan」と呼ぶ。
 
 ## JS Execution Flow
 全体としはざっくりこんな感じです。
@@ -123,7 +123,7 @@ interpreterは構築されたASTを元にバイトコードを生成します。
 このバイトコードからマシンコードを生成する時、「Type Feedback」と呼ばれるメタデータも一緒に生成します。これは後述するコード最適化のための情報で、型情報や同じコードの実行回数などの情報を含むものです。
 
 ### 5. Optimization
-バイトコードとType Feedbackの2つの情報を元に、V8のJIT compiler「Turbo Fan」がより最適化されたマシンコードを生成します。
+バイトコードとType Feedbackの2つの情報を元に、V8のJIT compiler「TurboFan」がより最適化されたマシンコードを生成します。
 
 なぜコードの最適化をするのかというと、一番の理由はJavaScriptは動的型付け言語だからです。
 型が動的に変化するため、本来であれば毎回型のチェックをしなければならず、それがプログラムの実行を遅くします。しかしType Feedbackというメタデータを介して、何度も実行されるコードの型情報を取得することで、型チェックをスキップすることができ、より最適化されたマシンコードを生成できるのです。
@@ -153,7 +153,7 @@ add('1', '2');
 add(true, false);
 ```
 
-この場合、Turbo fanはマシンコードをバイトコードに変換し直します。
+この場合、TurboFanはマシンコードをバイトコードに変換し直します。
 
 ## Conclusion
 ざっくりこのようにJavaScriptは実行されます。
