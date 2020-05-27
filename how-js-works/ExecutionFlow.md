@@ -5,7 +5,7 @@
 ## Motivation
 もともとJSのパフォーマンス周りについて調べていたら、JSのネイティブコード関連の話が出てきた。
 https://qiita.com/netebakari/items/7c1db0b0cea14a3d4419
-しかし、そういえばどういう風にJSが実行(=計算)される(機械語に翻訳されCPUが計算できるようになる)までをちゃんと知っていなかったので、これを機に勉強してみることにした。
+<br>しかし、そういえばどういう風にJSが実行(=計算)される(機械語に翻訳されCPUが計算できるようになる)までをちゃんと知っていなかったので、これを機に勉強してみることにした。
 
 ## 補足
 ### JSエンジン
@@ -33,7 +33,7 @@ FirefoxのSpiderMonkey、SafariのJavaScriptCoreといったJSエンジンとは
 https://v8.dev/blog/preparser
 
 ##### 通常のparser
-V8では、すぐに実行されるJavaScriptコードをparseするparser。
+V8では、すぐに実行されるJavaScriptコードをparseするparser。
 例えば、以下のような読み込まれたらすぐに実行されるコードはparserでparseされる。
 ```foo.js
 console.log('foo')
@@ -160,10 +160,10 @@ add(true, false);
 僕自身、V8のコードを直接読んでこのドキュメントを書いている訳じゃないので、大いに間違っている可能性もあるのであしからず。
 
 # References
-https://dev.to/lydiahallie/javascript-visualized-the-javascript-engine-4cdf?signin=true
-https://www.youtube.com/watch?v=voDhHPNMEzg
-https://v8.dev/blog/preparser
-https://stackoverflow.com/questions/54957946/what-does-v8s-ignition-really-do
-https://v8.dev/blog/launching-ignition-and-turbofan
-https://blog.hiroppy.me/entry/2017/08/03/095304
-https://docs.google.com/presentation/d/1OqjVqRhtwlKeKfvMdX6HaCIu9wpZsrzqpIVIwQSuiXQ/edit#slide=id.g1357e6d1a4_0_58
+- https://dev.to/lydiahallie/javascript-visualized-the-javascript-engine-4cdf?signin=true
+- https://www.youtube.com/watch?v=voDhHPNMEzg
+- https://v8.dev/blog/preparser
+- https://stackoverflow.com/questions/54957946/what-does-v8s-ignition-really-do
+- https://v8.dev/blog/launching-ignition-and-turbofan
+- https://blog.hiroppy.me/entry/2017/08/03/095304
+- https://docs.google.com/presentation/d/1OqjVqRhtwlKeKfvMdX6HaCIu9wpZsrzqpIVIwQSuiXQ/edit#slide=id.g1357e6d1a4_0_58
